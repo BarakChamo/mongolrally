@@ -6,15 +6,14 @@ import DevTools from 'mobx-react-devtools'
 
 import { Home } from './containers'
 
-// import { AppStore, DevicesStore } from './stores'
+import { LocationsStore } from './stores'
 
 import './styles/style.scss'
 
 const isDev = process.env.NODE_ENV !== 'production'
 
 const stores = {
-//   app: new AppStore(),
-//   devices: new DevicesStore()
+  locations: new LocationsStore()
 }
 
 const App = ({ children }) => (
