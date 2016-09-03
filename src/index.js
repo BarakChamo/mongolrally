@@ -8,7 +8,8 @@ import { Home } from './containers'
 
 // import { AppStore, DevicesStore } from './stores'
 
-// import './app.global.css'
+import './styles/style.scss'
+
 const isDev = process.env.NODE_ENV !== 'production'
 
 const stores = {
