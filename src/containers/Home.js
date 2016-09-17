@@ -108,7 +108,7 @@ class MapView extends Component {
   constructor(props) {
     super(props)
 
-    const bounds = fitBounds({ nw: LOCATIONS.NW, se: LOCATIONS.SE }, { height: window.innerHeight * 0.66, width: window.innerWidth })
+    const bounds = fitBounds({ nw: LOCATIONS.NW, se: LOCATIONS.SE }, { height: window.innerHeight * 0.5, width: window.innerWidth })
     this.center = bounds.center
     this.zoom = bounds.zoom
 
@@ -207,16 +207,45 @@ let Home = ({ locations: { reachDestination } }) => (
   <div className='home'>
     <section className='full-map'>
       <div className='map-fill'>
-        <h1 className='map-splash display-4'>Please Misbehave Responsibly!</h1>
         <MapView className='fill-map' />
+      </div>
+    </section>
+
+    <section className='container-fluid content clear'>
+      <div className='row'>
+        <div className='col-sm-12'>
+          <h1 className='display-4'>Please Misbehave Responsibly!</h1>
+          <h2>WildJounrey is going to Mongolia bitches!</h2>
+          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
+          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
+          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
+          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
+        </div>
       </div>
     </section>
 
     <section className='container-fluid content'>
       <div className='row'>
         <div className='col-sm-12'>
-          <h4 className='display-4'>WildJounrey is going to Mongolia!</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h1 className='display-4'>Please Misbehave Responsibly!</h1>
+          <h2>WildJounrey is going to Mongolia bitches!</h2>
+          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
+          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
+          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
+          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
+        </div>
+      </div>
+    </section>
+
+    <section className='container-fluid content'>
+      <div className='row'>
+        <div className='col-sm-12'>
+          <h1 className='display-4'>Please Misbehave Responsibly!</h1>
+          <h2>WildJounrey is going to Mongolia bitches!</h2>
+          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
+          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
+          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
+          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
         </div>
       </div>
     </section>
