@@ -7,11 +7,12 @@ html, body, #root {
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
+
 section.full-map {
   position: relative;
   padding: 1em;
   width: 100vw;
-  height: 100vh;
+  height: 66vh;
   text-align: center;
 }
 
@@ -26,6 +27,14 @@ section.full-map {
   object-fit: contain;
 }
 
+h1, h2,h3,h4,h5,h6, .nav {
+  // font-family: 'Julee' !important;
+  font-weight: 100 !important;
+}
+
+section.content {
+  padding: 1em 1.5em;
+}
 
 /*
   Navigation
@@ -43,9 +52,7 @@ nav {
   align-content: space-around;
   padding-top: 1em;
 }
-body {
-  background: orange;
-}
+
 nav .nav {
   flex:1;
   letter-spacing: 5px;
@@ -90,4 +97,13 @@ nav .nav {
   height: 50px;
   width: 50px;
   background: orange;
+}
+
+.map-splash {
+    z-index: 999999;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    // font-weight: 300 !important;
+    transform: translate(-50%, -0%);
 }

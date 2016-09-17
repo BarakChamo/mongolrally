@@ -1,83 +1,8 @@
 import React, { Component } from 'react'
-import GoogleMap from 'google-map-react'
-import { fitBounds } from 'google-map-react/utils'
 import { inject, observer } from 'mobx-react'
 
 import { MAPS_API_KEY, MAP_STYLE, LOCATIONS, ROUTE } from '../constants'
 
-/*
-  Helpers
-*/
-
-function getDirections(route, { DirectionsService, LatLng }) {
-  const directions = new DirectionsService()
-
-  const waypoints = route.map(
-    (location) => ({
-      location,
-      stopover: true
-    })
-  )
-
-  return new Promise((resolve, reject) => {
-    directions.route({
-      origin: waypoints[0].location,
-      destination: waypoints[waypoints.length - 1].location,
-      waypoints,
-      optimizeWaypoints: true,
-      travelMode: 'DRIVING'
-    }, function(response, status) {
-      if (status === 'OK') {
-        resolve(response)
-      } else {
-        reject(status)
-      }
-    })
-  })
-}
-
-
-function animateRoute(coords, map, maps, animationIndex, callback) {
-  const { Polyline, geometry: { spherical } } = maps
-
-  var self = this,
-      step = 0,
-      numSteps = 10,
-      animationSpeed = 0.50,
-      offset = animationIndex,
-      nextOffset = animationIndex + 1,
-      departure, destination, nextStop, line, interval
-
-  if (nextOffset >= coords.length) {
-    clearInterval(interval)
-    if(callback){callback()}
-    return false
-  }
-
-  departure = coords[offset]
-  destination = coords[nextOffset]
-
-  line = new Polyline({
-    path: [departure, departure],
-    geodesic: false,
-    strokeColor: '#f1d32e',
-    strokeOpacity: 1,
-    strokeWeight: 4,
-    map: map
-  })
-
-  interval = setInterval(function() {
-    step++;
-    if (step > numSteps) {
-      animationIndex++
-      animateRoute(coords, map, maps, animationIndex, callback)
-      clearInterval(interval)
-    } else {
-      nextStop = spherical.interpolate(departure,destination,step/numSteps)
-      line.setPath([departure, nextStop])
-    }
-  }, animationSpeed)
-}
 
 
 /*
@@ -108,7 +33,7 @@ class MapView extends Component {
   constructor(props) {
     super(props)
 
-    const bounds = fitBounds({ nw: LOCATIONS.NW, se: LOCATIONS.SE }, { height: window.innerHeight * 0.66, width: window.innerWidth })
+    const bounds = fitBounds({ nw: LOCATIONS.NW, se: LOCATIONS.SE }, { height: window.innerHeight * 0.75, width: window.innerWidth })
     this.center = bounds.center
     this.zoom = bounds.zoom
 
@@ -207,17 +132,7 @@ let Home = ({ locations: { reachDestination } }) => (
   <div className='home'>
     <section className='full-map'>
       <div className='map-fill'>
-        <h1 className='map-splash display-4'>Please Misbehave Responsibly!</h1>
         <MapView className='fill-map' />
-      </div>
-    </section>
-
-    <section className='container-fluid content'>
-      <div className='row'>
-        <div className='col-sm-12'>
-          <h4 className='display-4'>WildJounrey is going to Mongolia!</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
       </div>
     </section>
   </div>
