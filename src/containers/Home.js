@@ -116,30 +116,32 @@ class MapView extends Component {
   }
 
   onRoute([{routes: [{overview_path: routeA}]}, {routes:[{overview_path: routeB}]}]) {
+    // Check for mobile
+    if (false) {
+      var pathA = new google.maps.Polyline({
+        path: routeA,
+        geodesic: true,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
+      })
 
+      var pathB = new google.maps.Polyline({
+        path: routeB,
+        geodesic: true,
+        strokeColor: '#AC3AC3',
+        strokeOpacity: 1.0,
+        strokeWeight: 2
+      })
 
-    animateRoute(routeA, this.map, this.maps, 0, () => {
-      animateRoute(routeB, this.map, this.maps, 0)
-    })
+      pathA.setMap(this.map)
+      pathB.setMap(this.map)
+    } else {
+      animateRoute(routeA, this.map, this.maps, 0, () => {
+        animateRoute(routeB, this.map, this.maps, 0)
+      })
+    }
 
-    // var pathA = new google.maps.Polyline({
-    //   path: routeA,
-    //   geodesic: true,
-    //   strokeColor: '#FF0000',
-    //   strokeOpacity: 1.0,
-    //   strokeWeight: 2
-    // })
-    //
-    // var pathB = new google.maps.Polyline({
-    //   path: routeB,
-    //   geodesic: true,
-    //   strokeColor: '#AC3AC3',
-    //   strokeOpacity: 1.0,
-    //   strokeWeight: 2
-    // })
-
-    // pathA.setMap(this.map)
-    // pathB.setMap(this.map)
     // var route = response.routes[0]
     // var summaryPanel = document.getElementById('directions-panel')
     // summaryPanel.innerHTML = ''
@@ -187,7 +189,8 @@ class MapView extends Component {
         onGoogleApiLoaded={this.onMapLoaded}
         yesIWantToUseGoogleMapApiInternals={true}
       >
-        {/* {locations.route.map((point, i) => <MapMarker key={i} {...point} />)} */}
+        { <MapMarker {...LOCATIONS.ORIGIN} /> }
+        { <MapMarker {...LOCATIONS.DEST} /> }
       </GoogleMap>
     )
   }
@@ -206,7 +209,6 @@ let Home = ({ locations: { reachDestination } }) => (
       <div className='map-fill'>
         <MapView className='fill-map' />
       </div>
-      <img onClick={e => reachDestination()} src='src/assets/logo.png' className='logo'/>
     </section>
   </div>
 )

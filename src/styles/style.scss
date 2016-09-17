@@ -21,8 +21,50 @@ section.full-map {
 
 .logo {
   width: 150px;
-  height: auto;
+  height: 65px;
   object-fit: contain;
+}
+
+
+/*
+  Navigation
+*/
+
+nav {
+  z-index: 9999;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+  align-content: space-around;
+  padding-top: 1em;
+}
+body {
+  background: orange;
+}
+nav .nav {
+  flex:1;
+  letter-spacing: 5px;
+  position: relative;
+  text-align: center;
+  font-weight: 400;
+  color: rgb(100,100,100);
+  text-transform: uppercase;
+}
+
+.nav:not(.brand) {
+  // padding-top: 10px;
+}
+
+.nav.brand img {
+  margin-bottom: 0.5em;
+}
+
+.nav:hover {
+  text-decoration: none;
 }
 
 
