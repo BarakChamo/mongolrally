@@ -30,7 +30,7 @@ const Routes = (
 )
 
 render(
-  <div className='container-fluid'>
+  <div>
     {isDev && <DevTools />}
     <Router history={hashHistory} routes={Routes} />
   </div>,

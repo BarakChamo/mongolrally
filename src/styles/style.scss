@@ -1,5 +1,50 @@
 html, body, #root {
   height: 100%;
+  padding: 0;
+  margin:0;
 }
 
-@import '../../node_modules/bootstrap/scss/bootstrap'
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+section.full-map {
+  position: relative;
+  padding: 1em;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+
+/*
+  Global Styles
+*/
+
+.logo {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+
+/*
+  Map Styles
+*/
+
+.map-fill {
+  z-index: -1;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
+
+.gmnoprint:first-of-type, .gm-style-cc {
+  display: none;
+}
+
+.map-marker {
+  height: 50px;
+  width: 50px;
+  background: orange;
+}
