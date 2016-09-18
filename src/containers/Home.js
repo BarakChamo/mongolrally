@@ -205,7 +205,7 @@ MapView = inject('locations')(observer(MapView))
 
 let Home = ({ locations: { reachDestination } }) => (
   <div className='home'>
-    <section className='full-map'>
+    <section className='main'>
       <div className='map-fill'>
         <MapView className='fill-map' />
       </div>
@@ -215,7 +215,7 @@ let Home = ({ locations: { reachDestination } }) => (
       <div className='row'>
         <div className='col-sm-12'>
           <h1 className='display-4'>Please Misbehave Responsibly!</h1>
-          <h2>WildJounrey is going to Mongolia bitches!</h2>
+          <h2>WildJounrey is going to Mongolia</h2>
           <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
           <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
           <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
@@ -228,7 +228,7 @@ let Home = ({ locations: { reachDestination } }) => (
       <div className='row'>
         <div className='col-sm-12'>
           <h1 className='display-4'>Please Misbehave Responsibly!</h1>
-          <h2>WildJounrey is going to Mongolia bitches!</h2>
+          <h2>WildJounrey is going to Mongolia</h2>
           <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
           <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
           <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
@@ -241,7 +241,7 @@ let Home = ({ locations: { reachDestination } }) => (
       <div className='row'>
         <div className='col-sm-12'>
           <h1 className='display-4'>Please Misbehave Responsibly!</h1>
-          <h2>WildJounrey is going to Mongolia bitches!</h2>
+          <h2>WildJounrey is going to Mongolia</h2>
           <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
           <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
           <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>

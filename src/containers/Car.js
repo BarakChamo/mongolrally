@@ -4,10 +4,10 @@ import { inject, observer } from 'mobx-react'
 import { MAPS_API_KEY, MAP_STYLE, LOCATIONS, ROUTE } from '../constants'
 
 /*
-  Foundation View
+  Car View
 */
 
-let Foundation = ({ locations: { reachDestination } }) => (
+let Car = ({ locations: { reachDestination } }) => (
   <div className='home'>
     <section className='main'>
       <span>sdkfjsdlkfjslkdfjslkdfj</span>
@@ -18,8 +18,8 @@ let Foundation = ({ locations: { reachDestination } }) => (
     <section className='container-fluid content clear'>
       <div className='row'>
         <div className='col-sm-12'>
-          <h1 className='display-4'>WildJourney Foundation</h1>
-          <h2>Raising money to enable education</h2>
+          <h1 className='display-4'>Our Shit Ride</h1>
+          <h2>No AC in the gobi desert... in August.</h2>
           <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
           <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
           <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
@@ -30,6 +30,6 @@ let Foundation = ({ locations: { reachDestination } }) => (
   </div>
 )
 
-Foundation = inject('locations')(observer(Foundation))
+Car = inject('locations')(observer(Car))
 
-export default Foundation
+export default Car

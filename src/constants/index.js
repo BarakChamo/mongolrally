@@ -14,7 +14,7 @@ export const LOCATIONS = {
   },
   CENTER: {lng: 51.1068074, lat: 43.6595313},
   SE: { lng: 116.391281, lat: 44.978003 },
-  NW: {lng: -3.436838, lat: 50.525846 },
+  NW: {lng: -3.436838, lat: 47.525846 },
 }
 
 export const ROUTE = [

@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, IndexRoute, hashHistory } from 'react-router'
+import { Router, Route, IndexRoute, hashHistory, Link } from 'react-router'
 import { Provider, inject, observer } from 'mobx-react'
 import DevTools from 'mobx-react-devtools'
 
-import { Home } from './containers'
+import { Home, Foundation, Car, Team, FAQ, Contact } from './containers'
 
 import { LocationsStore } from './stores'
 
@@ -18,18 +18,24 @@ const stores = {
 
 const Navbar = ({ history, location, route }) => (
   <nav>
-    <a data-content="Team" href="" className='nav'>Team</a>
-    <a data-content="Car" href="" className='nav'>Car</a>
-    <a data-content="FAQ" href="" className='nav'>FAQ</a>
-    <a href="" className='nav brand'>
+    <div className="nav-mobile">
+      <input type="checkbox"></input>
+      <div className="menu-icon"></div>
+    </div>
+
+    <Link to="/team" className='nav'>Team</Link>
+    <Link to="/car" className='nav'>Car</Link>
+    <Link to="/" className='nav'>Wild Journey</Link>
+    <Link to="/" className='nav brand'>
       <img onClick={e => reachDestination()} src='src/assets/logo.png' className='logo' />
-      <span>Mongol Rally 2017</span>
+      <br/>
+      <span>Mongol Rally<br/>2017</span>
 
       {/* <small><small><small>Please Misbehave Responsibly</small></small></small> */}
-    </a>
-    <a data-content="Foundation" href="" className='nav'>Foundation</a>
-    <a data-content="WildJourney" href="" className='nav'>Wild Journey</a>
-    <a data-content="Contact" href="" className='nav'>Contact</a>
+    </Link>
+    <Link to="/foundation" className='nav'>Foundation</Link>
+    <Link to="/faq" className='nav'>FAQ</Link>
+    <Link to="/contact" className='nav'>Contact</Link>
   </nav>
 )
 
@@ -45,7 +51,11 @@ const App = ({ children, ...props }) => (
 const Routes = (
   <Route path="/" component={App}>
     <IndexRoute component={Home} />
-    {/* <Route path="/counter" component={Counter} /> */}
+    <Route path="/foundation" component={Foundation} />
+    <Route path="/contact" component={Contact} />
+    <Route path="/car" component={Car} />
+    <Route path="/team" component={Team} />
+    <Route path="/faq" component={FAQ} />
   </Route>
 )
 

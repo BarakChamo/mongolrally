@@ -3,6 +3,7 @@ html, body, #root {
   color: rgb(35,31,32);
   padding: 0;
   margin:0;
+  overflow-x: hidden;
 }
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
@@ -66,6 +67,87 @@ nav .nav {
   text-decoration: none;
 }
 
+.nav-mobile {
+  display: none;
+  position: absolute;
+  left:0;
+}
+
+@media (aspect-ratio: 1/3) {
+  nav .logo {
+    width: 250px;
+    height: 130px;
+  }
+
+  nav > .nav:not(.brand) {
+    display: none;
+  }
+
+  nav .nav-mobile {
+    display: inline-block;
+  }
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+  position: absolute;
+  display: block;
+  border-radius: 2px;
+  content:'';
+  width: 50px;
+  height: 5px;
+  background: #818A91;
+  transition: all 0.4s cubic-bezier(.25,.8,.25,1);
+}
+
+.menu-icon {
+  top: 15px;
+  left: 15px;
+}
+
+.menu-icon::before {
+  top: -15px;
+}
+
+.menu-icon::after {
+  top: 15px;
+}
+
+/* Hover */
+
+nav .menu-toggle:hover .menu-icon {
+  background:white;
+}
+
+nav:not(.menu-open) .menu-toggle:hover .menu-icon::after {
+  transform-origin: 75% 50%;
+  transform: rotate(27.5deg);
+}
+
+nav:not(.menu-open) .menu-toggle:hover .menu-icon::before {
+  transform-origin: 75% 50%;
+  transform: rotate(-27.5deg);
+}
+
+/* Open */
+
+nav.menu-open .menu-toggle {
+  transform: rotate(-90deg);
+}
+
+nav.menu-open .menu-icon {
+  background:white;
+}
+
+nav.menu-open .menu-icon::after {
+  transform: translateY(-0.5em) rotate(45deg);
+}
+
+nav.menu-open .menu-icon::before {
+  transform: translateY(0.5em) rotate(-45deg);
+}
+
 
 /*
   Sections
@@ -82,7 +164,7 @@ section.content {
 }
 
 section.content:nth-child(odd) {
-	background: #000;
+	background: rgb(35,31,32);
   color: white;
 	-webkit-transform: rotate(3deg);
 	-moz-transform: rotate(3deg);
@@ -91,7 +173,7 @@ section.content:nth-child(odd) {
 	transform: rotate(3deg);
 	margin-top: -200px;
 	box-shadow: 0px -1px 3px rgba(0,0,0,0.4);
-  padding: 1.5em 0em 7em 5em;
+  padding: 1.5em 5em 7em 5em;
 }
 
 section.content:nth-child(even) {
@@ -102,7 +184,7 @@ section.content:nth-child(even) {
 	-ms-transform: rotate(-3deg);
 	transform: rotate(-3deg);
 	box-shadow: 0px 2px 3px rgba(0,0,0,0.4) inset;
-  padding: 1.5em 0em 13em 5em;
+  padding: 1.5em 5em 13em 5.5em;
 }
 
 section.content.clear {
@@ -115,7 +197,7 @@ section.content.clear {
   Map Styles
 */
 
-section.full-map {
+section.main {
   position: relative;
   padding: 1em;
   width: 100vw;
