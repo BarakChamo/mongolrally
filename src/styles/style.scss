@@ -203,6 +203,14 @@ section.main {
   width: 100vw;
   height: 75vh;
   text-align: center;
+
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+section.main.fill {
+  background-size: cover;
 }
 
 

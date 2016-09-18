@@ -9,10 +9,7 @@ import { MAPS_API_KEY, MAP_STYLE, LOCATIONS, ROUTE } from '../constants'
 
 let Foundation = ({ locations: { reachDestination } }) => (
   <div className='home'>
-    <section className='main'>
-      <span>sdkfjsdlkfjslkdfjslkdfj</span>
-      <span>sdkfjsdlkfjslkdfjslkdfj</span>
-      <span>sdkfjsdlkfjslkdfjslkdfj</span>
+    <section className='main' style={{backgroundImage: 'url(src/assets/charity.jpg)'}}>
     </section>
 
     <section className='container-fluid content clear'>
