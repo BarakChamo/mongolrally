@@ -38,3 +38,5 @@ jspm_packages
 
 # Tern files (for Emacs autocompletion):
 .tern-port
+
+.DS_Store

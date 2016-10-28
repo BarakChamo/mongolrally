@@ -84,14 +84,18 @@ function animateRoute(coords, map, maps, animationIndex, callback) {
   Map Marker
 */
 
-const MapMarker = ({ $geoService, $getDimensions, $dimensionKey, $hover, lat, lng }) => {
+const MapMarker = ({ $geoService, $getDimensions, $dimensionKey, $hover, lat, lng, markerType }) => {
   // const mapWidth = $geoService.getWidth()
   // const mapHeight = $geoService.getHeight()
 
-  const {x: left, y:top} = $getDimensions($dimensionKey)
+  const {x: left, y: top} = $getDimensions($dimensionKey)
 
   return (
-    <div className='map-marker' style={{ top, left }} />
+    <img
+      className='map-marker'
+      src={"src/assets/" + markerType + ".png"}
+      style={{ top, left }}
+    />
   )
 }
 
@@ -189,8 +193,8 @@ class MapView extends Component {
         onGoogleApiLoaded={this.onMapLoaded}
         yesIWantToUseGoogleMapApiInternals={true}
       >
-        { <MapMarker {...LOCATIONS.ORIGIN} /> }
-        { <MapMarker {...LOCATIONS.DEST} /> }
+        { <MapMarker {...LOCATIONS.ORIGIN} markerType="start" /> }
+        { <MapMarker {...LOCATIONS.DEST} markerType="finish" /> }
       </GoogleMap>
     )
   }
