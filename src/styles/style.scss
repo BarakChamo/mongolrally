@@ -33,6 +33,14 @@ section.content {
 */
 
 nav {
+    a.nav {
+        font-weight: 500 !important;
+        color: #ffffff;
+        text-shadow: black 0.1em 0.1em 0.2em;
+    }
+}
+
+nav {
   z-index: 9999;
   position: absolute;
   top:0;
@@ -201,7 +209,7 @@ section.main {
   position: relative;
   padding: 1em;
   width: 100vw;
-  height: 75vh;
+  height: 69vh;
   text-align: center;
 
   background-position: left center;
