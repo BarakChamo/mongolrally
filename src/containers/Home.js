@@ -219,37 +219,8 @@ let Home = ({ locations: { reachDestination } }) => (
       <div className='row'>
         <div className='col-sm-12'>
           <h1 className='display-4'>Please Misbehave Responsibly!</h1>
-          <h2>WildJounrey is going to Mongolia</h2>
-          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
-          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
-          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
-          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
-        </div>
-      </div>
-    </section>
-
-    <section className='container-fluid content'>
-      <div className='row'>
-        <div className='col-sm-12'>
-          <h1 className='display-4'>Please Misbehave Responsibly!</h1>
-          <h2>WildJounrey is going to Mongolia</h2>
-          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
-          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
-          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
-          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
-        </div>
-      </div>
-    </section>
-
-    <section className='container-fluid content'>
-      <div className='row'>
-        <div className='col-sm-12'>
-          <h1 className='display-4'>Please Misbehave Responsibly!</h1>
-          <h2>WildJounrey is going to Mongolia</h2>
-          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
-          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
-          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
-          <p>You all might suck balls but we're fucking awesome! LOLOL we're going to Mongolia!.</p>
+          <h2>Three morons. A Fiat Panda. Driving from London to Mongolia and beyond, for charity.</h2>
+          <p>Explore the rest of our website from the menu at the top to find out more about our goals!</p>
         </div>
       </div>
     </section>
