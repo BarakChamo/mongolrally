@@ -4,7 +4,7 @@ import { Router, Route, IndexRoute, hashHistory, Link } from 'react-router'
 import { Provider, inject, observer } from 'mobx-react'
 import DevTools from 'mobx-react-devtools'
 
-import { Home, Charity, Car, Team, FAQ, Contact } from './containers'
+import { Home, Charity, Car, Team, FAQ, Credits, Contact } from './containers'
 
 import { LocationsStore } from './stores'
 
@@ -51,6 +51,7 @@ const App = ({ children, ...props }) => (
 const Routes = (
   <Route path="/" component={App}>
     <IndexRoute component={Home} />
+    <Route path="/credits" component={Credits}/>
     <Route path="/charity" component={Charity} />
     <Route path="/contact" component={Contact} />
     <Route path="/car" component={Car} />
