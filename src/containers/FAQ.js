@@ -72,7 +72,7 @@ let FAQ = ({ locations: { reachDestination } }) => (
       <div className='row'>
         <div className='col-sm-12'>
           <p><b>What route are you going to take?<br/></b>
-          As we said, there is no route planned by the organizers. The race starts in London and ends in Ulan-Ude, a few kilometers above the Russian-Mongolian border, what happens between this two cities it's our business only. At the moment, our plan is to follow the most common route, going from London to Istanbul, drive East to Azerbaijan and get a ferry to Turkmenistan. From there, we'd like to take a small detour and get to... Beijing. Yes, we would love to drive through China, we believe we'll never have another chance to drive the entire country from one side to the other, and we don't want to miss that chance. From there, we'll get straight to the finishing line. Sounds easy, doesn't it?</p>
+          As we said, there is no route planned by the organizers. The race starts in London and ends in Ulan-Ude, a few kilometers above the Russian-Mongolian border, and what happens between this two cities it's our business only. At the moment, our plan is to follow the most common route, going from London to Istanbul, drive East to Azerbaijan and get a ferry to Turkmenistan. From there, we'll drive to basically all the -stans till Kazakhstan, Russia and (maybe) Mongolia, until we reach the finish line. Does this sound like a lot? Well, it's not enough for us! People do it every year, so we are aiming for something a little bit crazier. The charity we are working with operates in eastern India, so once we are "done" with the Rally we'll take a "small" detour, take our pretty asses and what remains of the car, and drive through all of China, Myanmar and Vietnam just to get to India and say hello to some friends. Lovely, aren't we?</p>
         </div>
       </div>
     </section>
@@ -81,7 +81,7 @@ let FAQ = ({ locations: { reachDestination } }) => (
       <div className='row'>
         <div className='col-sm-12'>
           <p><b>To whom will you donate the money?</b><br/>
-          As the race rules say, at least £500 must go to the organizers' charity organization. All the rest of the money that we'll be able to collect will go to someone that provides poor children's education. All three of us work in IT and we got there only because our family could afford to send us to university. We think it's fair that to give the same possibility to others that weren't as lucky. We are currently trying to get in touch with some organizations. You'll find more on the specific page as soon as we have something to tell you! 
+          As the race rules say, at least £500 must go to the organizers' charity organization. All the rest of the money that we'll be able to collect will go to Bhalobasa, a charity organization that has been working in poor countries for 25 years, helping them setting up schools and basic healthcare. We already had two meetings with them and we are fascineted by the efforts they put in their work and the results they achieved. Therefore, we are happy and proud to run our campaign to raise as much money as possible to their cause. If everything goes as planned, we will even go to visit their Indian centre!
           </p>
         </div>
       </div>
