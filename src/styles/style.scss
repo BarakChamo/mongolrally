@@ -179,11 +179,6 @@ section.content {
 section.content:nth-child(odd) {
 	background: rgb(35,31,32);
   color: white;
-	-webkit-transform: rotate(3deg);
-	-moz-transform: rotate(3deg);
-	-o-transform: rotate(3deg);
-	-ms-transform: rotate(3deg);
-	transform: rotate(3deg);
 	margin-top: -200px;
 	box-shadow: 0px -1px 3px rgba(0,0,0,0.4);
   padding: 1.5em 5em 7em 5em;
@@ -191,11 +186,6 @@ section.content:nth-child(odd) {
 
 section.content:nth-child(even) {
 	background: rgb(237,237,237);
-	-webkit-transform: rotate(-3deg);
-	-moz-transform: rotate(-3deg);
-	-o-transform: rotate(-3deg);
-	-ms-transform: rotate(-3deg);
-	transform: rotate(-3deg);
 	box-shadow: 0px 2px 3px rgba(0,0,0,0.4) inset;
   padding: 1.5em 5em 13em 5.5em;
 }
